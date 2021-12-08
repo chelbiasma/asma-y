@@ -1,0 +1,10 @@
+h2{
+    color: green; 
+}
+  #navb li{
+      display: inline;
+      font-family: Helvetica neue, roboto;
+  } #navb a{
+      display: inline-block;
+      padding: 10px;}
+      
