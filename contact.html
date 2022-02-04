@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <h1 id="titre">Formulaire d'adoption</h1>
+    <section class="pageprinci">
+        <form class="row g-3 needs-validation form-box" onsubmit="user()" novalidate>
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="saisir votre nom" id="validationCustom01" value="" required>
+            </div>
+            <div class="col-md-4">
+
+                <input type="text" class="form-control" placeholder="saisir votre prénom" id="validationCustom02" value="" required>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="ville" id="validationCustom03" value="" required>
+                <div class="invalid-feedback">
+                    <h4>Veuillez fournir une ville valide</h4>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label"><h4>State</h4></label>
+                <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value=""><b>-18 ans</b></option>
+            <option><b>entre [18-28]</b></option>
+            <option> entre [28-38]</option>
+            <option> entre [38-48]</option>
+            <option> plus 50 ans</option>
+          </select>
+                <div class="invalid-feedback">
+                    <h4>Veuillez sélectionner un état valide.</h4>
+                </div>
+            </div>
+            </div>
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label"></label>
+                <textarea class="form-control is-invalid" id="validationTextarea" placeholder="zone de text" required></textarea>
+                <div class="invalid-feedback">
+                    <h4>Pourquoi voulez-vous adopter un animal!!</h4>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                    <h3>Accepter les termes et conditions</h3>
+            </label>
+                        <div class="invalid-feedback">
+                            <h3>Vous devez accepter avant de soumettre</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" id="monbutton" type="submit"><h3>Envoyer</h3> <i class="fas fa-arrow-right"></i></button>
+                </div>
+        </form>
+        <div id="resultat">
+
+        </div>
+    </section>
+
+    <script>
+        function user(e) {
+            e.preventDefault()
+            var myprénom = document.getElementById("validationCustom02").value;
+            var myville = document.getElementById("validationCustom03").value;
+            document.getElementById("resultat").innerHTML = `nom=${myNom}
+            prénom=${myprénom}
+            ville=${myville}`;
+        }
+    </script>
+</body>
